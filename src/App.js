@@ -20,6 +20,7 @@ function App() {
       })
   }
 
+  // useEffect hook: run this function upon component mount
   useEffect(() => {
     fetchGoose()
   })
@@ -39,6 +40,7 @@ function App() {
     setMsg('Goose added')
   }
 
+  // useEffect with 2nd param provided: run this function upon elements in 2nd param (the array) changes
   useEffect(() => {
     if (msg) {
       setTimeout(() => {
@@ -54,7 +56,7 @@ function App() {
       <input className="filter-input" placeholder="Filter by name" value={ filterText } onChange={ (e) => { setFilterText(e.target.value) } } />
       {/*
         Filter geese by our search keyterm and map it to <Goose/> objects
-        Note: onDelete is a prop where a function is passed in
+        Note: onDelete is a prop where a function is passed into the Goose component
       */}
       { geese
           .filter((goose) => { return goose.name.toLowerCase().includes(filterText.toLowerCase()) })

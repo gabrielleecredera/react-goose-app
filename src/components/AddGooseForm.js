@@ -33,6 +33,7 @@ const AddGooseForm = (props) => {
       {
         showForm ?
         (
+          /* React.Fragment is an element used to wrap multiple elements, but the React.Fragment part itself doesn't get rendered */
           <React.Fragment>
             <input placeholder="Goose name" value={ name } onChange={ (e) => { setName(e.target.value) } } />
             <input placeholder="Aggression" type="number" value={ aggression } onChange={ (e) => { setAggression(e.target.value) } } />
