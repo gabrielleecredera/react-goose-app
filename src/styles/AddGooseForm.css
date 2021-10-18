@@ -1,0 +1,58 @@
+.goose-form {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #aaa;
+}
+
+.goose-form input {
+  padding: 5px 14px;
+  font-size: 18px;
+}
+
+.goose-form input:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.goose-form button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.goose-form .primary-btn {
+  background-color: #b2f7b4;
+}
+
+.goose-form .primary-btn:hover {
+  background-color: #83de86;
+}
+
+.goose-form .close-btn {
+  background-color: #eee;
+}
+
+.goose-form .close-btn:hover {
+  background-color: #ddd;
+}
+@media only screen and (max-width: 800px) {
+  .goose-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .goose-form input, .goose-form button {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
